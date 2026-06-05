@@ -38,28 +38,9 @@ document.addEventListener("DOMContentLoaded", function(){
             const myHeaders = new Headers();
             myHeaders.append("content/type", "application/json");
 
-            const graphql = `query userSessionProgress($username: String!) {
-            allQuestionsCount {
-                difficulty
-                count
-            }
-
-            matchedUser(username: $username) {
-                submitStats {
-                    acSubmissionNum {
-                        difficulty
-                        count
-                        submissions
-                    }
-
-                    totalSubmissionNum {
-                        difficulty
-                        count
-                        submissions
-                    }
-                }
-            }
-        }`;
+            const graphql = JSON.stringify({
+                "\n query userSessionProgress($username: String!) {\n allQuestions Count {\n difficulty\n count\n \n matchedUser (username: $username) {\n submitStats {\n difficulty\n count\n acSubmissionNum submissions\n } {\n An totalSubmissionNum {\n difficulty\n count\n submissions\n }\n }\n }\n}\n ", variables: {"username": `${username}`}
+            })
 
             if(!response.ok){
                 throw new Error("Unable to fetch the data");
