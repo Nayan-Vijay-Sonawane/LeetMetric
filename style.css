@@ -16,10 +16,36 @@ body{
 .container{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     background-color: rgb(69, 64, 64);
     padding: 20px;
     border-radius: 5px;
     width: 600px;
     max-width: 50%;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+.user-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: start;
+}
+
+.user-input-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#user-input{
+    width: 80%;
+    padding: 0.4rem;
+}
+
+#search-btn{
+    padding: 0.4rem;
+    border-radius: 5px;
 }
