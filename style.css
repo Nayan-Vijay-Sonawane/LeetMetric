@@ -12,3 +12,14 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: grey;
+    padding: 20px;
+    border-radius: 5px;
+    width: 600px;
+    max-width: 50%;
+}
