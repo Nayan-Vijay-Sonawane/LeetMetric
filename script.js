@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function(){
             alert("Username should not be empty");
             return false;
         }
-
         const regex = /^[a-zA-Z0-9_-]{1, 15}$/;
         const isMatching = regex.test(username);
         if(!isMatching){
@@ -32,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
             searchButton.textContent = "Searching...";
             searchButton.disabled = true;
-            
+
             const response = await fetch(url);
             if(!response.ok){
                 throw new Error("Unable to fetch the data");
