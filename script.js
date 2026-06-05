@@ -42,6 +42,14 @@ document.addEventListener("DOMContentLoaded", function(){
                 "\n query userSessionProgress($username: String!) {\n allQuestions Count {\n difficulty\n count\n \n matchedUser (username: $username) {\n submitStats {\n difficulty\n count\n acSubmissionNum submissions\n } {\n An totalSubmissionNum {\n difficulty\n count\n submissions\n }\n }\n }\n}\n ", variables: {"username": `${username}`}
             })
 
+            const requestOptions = {
+                method: "POST",
+                headers = myHeaders,
+                body: graphql,
+                redirect: "Follow"
+            };
+
+            const response = await fetch(targetUrl, requestOptions);
             if(!response.ok){
                 throw new Error("Unable to fetch the data");
                 const data = await response.json();
