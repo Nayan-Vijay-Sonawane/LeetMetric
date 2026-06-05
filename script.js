@@ -40,11 +40,12 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         }
         catch(error){
-
+            statsContainer.innerHTML = `<p>No data Found</p>`;
         }
 
         finally{
-
+            searchButton.textContent = "Search";
+            searchButton.disabled = false;
         }
     }
 
