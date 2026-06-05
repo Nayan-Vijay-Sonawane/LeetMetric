@@ -38,9 +38,28 @@ document.addEventListener("DOMContentLoaded", function(){
             const myHeaders = new Headers();
             myHeaders.append("content/type", "application/json");
 
-            const graphql = JSON.stringify({
-                
-            })
+            const graphql = `query userSessionProgress($username: String!) {
+            allQuestionsCount {
+                difficulty
+                count
+            }
+
+            matchedUser(username: $username) {
+                submitStats {
+                    acSubmissionNum {
+                        difficulty
+                        count
+                        submissions
+                    }
+
+                    totalSubmissionNum {
+                        difficulty
+                        count
+                        submissions
+                    }
+                }
+            }
+        }`;
 
             if(!response.ok){
                 throw new Error("Unable to fetch the data");
