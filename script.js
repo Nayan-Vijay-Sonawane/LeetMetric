@@ -34,22 +34,24 @@ document.addEventListener("DOMContentLoaded", function(){
 
             // const response = await fetch(url);
 
-            const targetUrl = "http://leetcode.com/graphql/";
+            const proxyUrl = "https://cors-anywhere.herokuapp.com/"
+            const targetUrl = "https://leetcode.com/graphql/";
             const myHeaders = new Headers();
             myHeaders.append("content/type", "application/json");
 
             const graphql = JSON.stringify({
-                "\n query userSessionProgress($username: String!) {\n allQuestions Count {\n difficulty\n count\n \n matchedUser (username: $username) {\n submitStats {\n difficulty\n count\n acSubmissionNum submissions\n } {\n An totalSubmissionNum {\n difficulty\n count\n submissions\n }\n }\n }\n}\n ", variables: {"username": `${username}`}
+                query: "\n   query userSessionProgress($username: String!) {\n  allQuestionsCount {\n    difficulty\n   count\n  }\n  matchedUser(username: $username) {\n   submitStats {\n  acSubmissionNum difficulty\n   count\n  submissions\n   }\n  totalSubmissionNum  {\n  difficulty\n   count\n   submissions\n   }\n   }\n  }\n}\n   ", 
+                variables: {"username": `${username}`}
             })
 
             const requestOptions = {
                 method: "POST",
-                headers = myHeaders,
+                headers: myHeaders,
                 body: graphql,
                 redirect: "Follow"
             };
 
-            const response = await fetch(targetUrl, requestOptions);
+            const response = await fetch(proxyUrl+targetUrl, requestOptions);
             if(!response.ok){
                 throw new Error("Unable to fetch the data");
                 const data = await response.json();
