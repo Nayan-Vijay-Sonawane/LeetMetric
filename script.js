@@ -75,11 +75,24 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     }
 
+    function updateProgress(solved, total, label, circle){
+
+    }
+
     function displayUserData(parsedData){
          const totalQues = parsedData.data.allQuestionsCount[0].count;
          const totalEasyQues = parsedData.data.allQuestionsCount[1].count;
          const totalMediumQues = parsedData.data.allQuestionsCount[2].count;
          const totalHardQues = parsedData.data.allQuestionsCount[3].count;
+
+         const solvedTotalQues = parsedData.data.matchedUser.submitStats.acSubmissionNum[0].count;
+         const solvedTotalEasyQues = parsedData.data.matchedUser.submitStats.acSubmissionNum[1].count;
+         const solvedTotalMediumQues = parsedData.data.matchedUser.submitStats.acSubmissionNum[2].count;
+         const solvedTotalHardQues = parsedData.data.matchedUser.submitStats.acSubmissionNum[3].count;
+
+         updatedProgress(solvedTotalEasyQues, totalEasyQues, easyLabel, easyProgressCircle);
+         updatedProgress(solvedTotalMediumQues, totalMediumQues, mediumLabel, mediumProgressCircle);
+         updatedProgress(solvedTotalHardQues, totalHardQues, hardLabel, hardProgressCircle);
          
     }
 
