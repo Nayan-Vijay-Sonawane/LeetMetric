@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
             const graphql = JSON.stringify({
 
-                query: "\n    query userProfileUserQuestionProgressV2($userSlug: String!) {\n  userProfileUserQuestionProgressV2(userSlug: $userSlug) {\n    numAcceptedQuestions {\n      count\n      difficulty\n    }\n    numFailedQuestions {\n      count\n      difficulty\n    }\n    numUntouchedQuestions {\n      count\n      difficulty\n    }\n    userSessionBeatsPercentage {\n      difficulty\n      percentage\n    }\n    totalQuestionBeatsPercentage\n  }\n}\n    ",
-                variables : {userSlug: `${username}`}
+                query: "\n    query userSessionProgress($username: String!) {\n  allQuestionsCount {\n    difficulty\n    count\n  }\n  matchedUser(username: $username) {\n    submitStats {\n      acSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n      totalSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n    }\n  }\n}\n    ",
+                variables: {username: `${username}`}
 
                 // query: "\n   query userSessionProgress($username: String!) {\n  allQuestionsCount {\n    difficulty\n   count\n  }\n  matchedUser(username: $username) {\n   submitStats {\n  acSubmissionNum difficulty\n   count\n  submissions\n   }\n  totalSubmissionNum  {\n  difficulty\n   count\n   submissions\n   }\n   }\n  }\n}\n   ", 
                 // variables: {"username": `${username}`}
