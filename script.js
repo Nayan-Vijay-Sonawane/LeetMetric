@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const easyLabel = document.getElementById("easy-label");
     const mediumLabel = document.getElementById("medium-label");
     const hardLabel = document.getElementById('hard-label');
-    const cardStatsContainer = document.querySelector("stats-card");
+    const cardStatsContainer = document.querySelector(".stats-card");
 
     // return true or false based on regex
     function validateUsername(username){
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
             // const response = await fetch(url);
 
-            const proxyUrl = "https://cors-anywhere.herokuapp.com"
+            const proxyUrl = "https://cors-anywhere.herokuapp.com/"
             const targetUrl = "https://leetcode.com/graphql/";
             const myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 redirect: "follow"
             };
 
+            console.log(proxyUrl + targetUrl);
             const response = await fetch(proxyUrl + targetUrl, requestOptions);
             if(!response.ok){
                 throw new Error("Unable to fetch the data");
