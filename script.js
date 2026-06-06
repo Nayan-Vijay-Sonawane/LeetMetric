@@ -61,8 +61,9 @@ document.addEventListener("DOMContentLoaded", function(){
             if(!response.ok){
                 throw new Error("Unable to fetch the data");
             }
-            const data = await response.json();
-            console.log("Logging data: ", data);
+            const parsedData = await response.json();
+            console.log("Logging data: ", parsedData);
+            displayUserData(parsedData);
         }
         catch(error){
             statsContainer.innerHTML = `<p>No data Found</p>`;
@@ -74,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     }
 
-    function displayData(data){
+    function displayData(parsedData){
          
     }
 
