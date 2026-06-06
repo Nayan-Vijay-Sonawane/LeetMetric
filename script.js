@@ -74,6 +74,10 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     }
 
+    function displayData(data){
+         
+    }
+
     // fetch the value after clicking on search button
     searchButton.addEventListener('click', function(){
         const username = usernameInput.value;
