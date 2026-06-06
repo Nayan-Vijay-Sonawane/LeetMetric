@@ -75,7 +75,11 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     }
 
-    function displayData(parsedData){
+    function displayUserData(parsedData){
+         const totalQues = parsedData.data.allQuestionsCount[0].count;
+         const totalEasyQues = parsedData.data.allQuestionsCount[1].count;
+         const totalMediumQues = parsedData.data.allQuestionsCount[2].count;
+         const totalHardQues = parsedData.data.allQuestionsCount[3].count;
          
     }
 
