@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 redirect: "follow"
             };
 
-            console.log(proxyUrl + targetUrl);
+            // console.log(proxyUrl + targetUrl);   // to check the url is working or not
             const response = await fetch(proxyUrl + targetUrl, requestOptions);
             if(!response.ok){
                 throw new Error("Unable to fetch the data");
