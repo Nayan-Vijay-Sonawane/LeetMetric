@@ -96,8 +96,17 @@ h1{
     gap: 10px;
 }
 
+.stats-card{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    felx-wrap: wrap;
+    gap: 10px;
+}
 .card{
     background-color: #1e293b;
-    width: 250px;
+    width: 220px;
     max-width: 290px;
+    padding: 20px;
+    border-radius: 10px;
 }
