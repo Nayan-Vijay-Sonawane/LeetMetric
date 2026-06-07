@@ -74,10 +74,10 @@ h1{
     #1b4332 0%
     );
     /* background: */
-        conic-gradient(
+    background: conic-gradient(
             #299f5d var(--progress-degree, 0%),
             #1d3526 0%
-        ); */
+        ); 
     flex-direction: column;
 }
 
