@@ -54,8 +54,6 @@ h1{
     background: whitesmoke;
     color: black;
     border: none;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
 .circle{
@@ -102,6 +100,7 @@ h1{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: space-evenly;
 }
 
 h4{
@@ -114,4 +113,5 @@ h4{
     border-radius: 10px;
     font-size: 1rem;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    min-height: 2rem;
 }
