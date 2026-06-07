@@ -98,4 +98,6 @@ h1{
 
 .card{
     background-color: #1e293b;
+    width: 250px;
+    max-width: 290px;
 }
