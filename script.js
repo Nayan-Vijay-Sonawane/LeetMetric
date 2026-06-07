@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
             searchButton.textContent = "Searching...";
             searchButton.disabled = true;
-            statsContainer.style.setProperty("display", hidden);
+            // statsContainer.style.setProperty("display", hidden);
 
             // const response = await fetch(url);
 
