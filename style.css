@@ -49,10 +49,10 @@ h1{
 }
 
 #search-btn{
-    padding: 0.4rem;
+    padding: 0.6rem;
     border-radius: 5px;
-    background: #22c55e;
-    color: white;
+    background: whitesmoke;
+    color: black;
     border: none;
     cursor: pointer;
     transition: 0.3s;
@@ -97,5 +97,5 @@ h1{
 }
 
 .card{
-    background-color: #334155;
+    background-color: #1e293b;
 }
