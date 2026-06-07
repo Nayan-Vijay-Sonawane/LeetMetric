@@ -106,15 +106,14 @@ document.addEventListener("DOMContentLoaded", function(){
          console.log("Cards ka data: ", cardsData);
 
          cardStatsContainer.innerHTML = cardsData.map(
-            data => {
-                return `
+            data => 
+                 `
                     <div class="card">
-                    <h3>${data.label}</h3>
+                    <h4>${data.label}</h4>
                     <p>${data.value}</p>
                     </div>
                 `
-            }
-         )
+         ).join("");
          
     }
 
