@@ -69,11 +69,11 @@ h1{
     font-size: 1rem;
     color: white;
     font-weight: 700;
-    background: conic-gradient(
+    /* background: conic-gradient(
     #00c853 var(--progress-degree, 0%),
     #1b4332 0%
     );
-    /* background:
+    /* background: */
         conic-gradient(
             #299f5d var(--progress-degree, 0%),
             #1d3526 0%
@@ -92,6 +92,30 @@ h1{
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+.easy-progress{
+    border-color: #00b8a3;
+    background: conic-gradient(
+        #00b8a3 var(--progress-degree,0%),
+        #123524 0%
+    );
+}
+
+.medium-progress{
+    border-color: #ffc01e;
+    background: conic-gradient(
+        #ffc01e var(--progress-degree,0%),
+        #3f3210 0%
+    );
+}
+
+.hard-progress{
+    border-color: #ff375f;
+    background: conic-gradient(
+        #ff375f var(--progress-degree,0%),
+        #3f1620 0%
+    );
 }
 
 .stats-card{
