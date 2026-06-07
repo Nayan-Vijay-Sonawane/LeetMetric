@@ -95,6 +95,26 @@ document.addEventListener("DOMContentLoaded", function(){
          updatedProgress(solvedTotalEasyQues, totalEasyQues, easyLabel, easyProgressCircle);
          updatedProgress(solvedTotalMediumQues, totalMediumQues, mediumLabel, mediumProgressCircle);
          updatedProgress(solvedTotalHardQues, totalHardQues, hardLabel, hardProgressCircle);
+
+         const cardsData = [
+            {label: "Overall Submissions", value:parsedData.data.matchedUser.submitStats.totalSubmissionNum[0].submissions },
+            {label: "Overall Easy Submissions", value:parsedData.data.matchedUser.submitStats.totalSubmissionNum[1].submissions },
+            {label: "Overall Medium Submissions", value:parsedData.data.matchedUser.submitStats.totalSubmissionNum[2].submissions },
+            {label: "Overall Hard Submissions", value:parsedData.data.matchedUser.submitStats.totalSubmissionNum[3].submissions },
+         ];
+
+         console.log("Cards ka data: ", cardsData);
+
+         cardStatsContainer.innerHTML = cardsData.map(
+            data => {
+                return `
+                    <div class="card">
+                    <h3>${data.label}</h3>
+                    <p>${data.value}</p>
+                    </div>
+                `
+            }
+         )
          
     }
 
